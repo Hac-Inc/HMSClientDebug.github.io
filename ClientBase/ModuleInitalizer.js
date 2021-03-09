@@ -53,7 +53,7 @@ function initModules() {
                 let JsExecuter_Module = new JsExecuter;
                 let SpaceplanWattMultiplier_Module = new SpaceplanWattMultiplier;
                 let FontChanger_Module = new ChangeFont;
-                let TestModule_Module = new TestModule;
+                //let TestModule_Module = new TestModule;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
