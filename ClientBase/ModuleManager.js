@@ -107,6 +107,7 @@ class m_boolSetting {
                 this.displayName = displayName;
                 this.varName = varName;
                 this.defaultValue = defaultValue;
+                this.settingType = "bool";
         }
         draw() {
                 let br = document.createElement("br");
@@ -129,7 +130,7 @@ class m_boolSetting {
                         }
                         document.getElementById(this.tiedModuleId + "-moduleS-setting-container").appendChild(setting);
                         document.getElementById(this.tiedModuleId + "-moduleS-setting-container").appendChild(label);
-                },2010);
+                },10);
         }
 }
 
@@ -141,6 +142,7 @@ class m_intSetting {
                 this.defaultValue = defaultValue;
                 this.minValue = minValue;
                 this.maxValue = maxValue;
+                this.settingType = "int";
         }
         draw() {
                 let br = document.createElement("br");
@@ -165,7 +167,7 @@ class m_intSetting {
                         document.getElementById(this.varName + "-intSetting").addEventListener('change', function() {
                                 document.getElementById(this.varName + "-intSetting-label").innerHTML = this.displayName + ": " + document.getElementById(this.varName + "-intSetting").value;
                         })
-                },2010);
+                },10);
         }
 }
 
