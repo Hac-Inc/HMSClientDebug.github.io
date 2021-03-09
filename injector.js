@@ -74,7 +74,8 @@ const client_debug_files = [
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/DarkMode.js',
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/JsExecuter.js',
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/SpaceplanWattMultiplier.js',
-        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/ChangeFont.js'
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/ChangeFont.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/TestModule.js'
 
 ]
 
