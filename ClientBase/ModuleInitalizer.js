@@ -53,7 +53,7 @@ function initModules() {
                 let JsExecuter_Module = new JsExecuter;
                 let SpaceplanWattMultiplier_Module = new SpaceplanWattMultiplier;
                 let FontChanger_Module = new ChangeFont;
-                //let TestModule_Module = new TestModule;
+                let TestModule_Module = new TestModule;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -69,13 +69,14 @@ function initModules() {
                 modules.push(JsExecuter_Module);
                 modules.push(SpaceplanWattMultiplier_Module);
                 modules.push(FontChanger_Module);
-                //modules.push(TestModule_Module);
+                modules.push(TestModule_Module);
 
 }
 
-//setTimeout(initModules(), 2000);
-function run() {
+setTimeout(initModules(), 1000);
+setTimeout(HMSClientRun(), 1000);
+function HMSClientRun() {
         setTimeout(buildHMSClient(), 1201);
         setTimeout(buildHMSClientScreen(), 1201);
-        //setTimeout(buildHMSClientScreenSettings(), 2300);
+        setTimeout(buildHMSClientScreenSettings(), 2300);
 }
