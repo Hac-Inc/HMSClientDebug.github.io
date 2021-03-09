@@ -166,6 +166,41 @@ function buildHMSClientScreen() {
 }
 
 
+
+
+
+//SETTINGS:
+
+
+
+function registerBoolSetting(tiedModuleId, displayName, varName, defaultValue) {
+        let setting = new m_boolSetting(tiedModuleId, displayName, varName, defaultValue);
+        m_settings.push(setting);
+};
+
+function boolSetting(setting) {
+        if(document.getElementById(setting + "-boolSetting").checked == true) {
+                return true;
+        } else if(document.getElementById(setting + "-boolSetting").checked == false) {
+                return false;
+        }
+}
+
+
+function registerIntSetting(tiedModuleId, displayName, varName, defaultValue, minValue, maxValue) {
+        let setting = new m_intSetting(tiedModuleId, displayName, varName, defaultValue, minValue, maxValue);
+        m_settings.push(setting);
+}
+
+function intSetting(setting) {
+        let value = document.getElementById(setting + "-intSetting").value;
+        return value;
+}
+
+
+
+
+
 function drawBoolSetting(i) {
         let br = document.createElement("br");
         let setting = document.createElement("input");
