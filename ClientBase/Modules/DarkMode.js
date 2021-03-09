@@ -7,6 +7,7 @@ class DarkMode extends module {
                 this.tooltip = "Makes the body element dark. *MAY NOT WORK ON ALL SITES*";
                 this.hasSettings = true;
                 registerBoolSetting(this.ModuleId, "Super Dark Mode", "darkmode_superdark", false);
+                registerIntSetting(this.ModuleId, "Test Int", "testIntdarkmode", 2, 0, 4);
         }
         execute() {
                 document.body.style='background:#292a2d';
