@@ -69,7 +69,7 @@ function initModules() {
                 modules.push(JsExecuter_Module);
                 modules.push(SpaceplanWattMultiplier_Module);
                 modules.push(FontChanger_Module);
-                modules.push(TestModule_Module);
+               // modules.push(TestModule_Module);
 
 }
 
