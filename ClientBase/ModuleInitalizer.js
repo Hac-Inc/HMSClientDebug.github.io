@@ -69,13 +69,13 @@ function initModules() {
                 modules.push(JsExecuter_Module);
                 modules.push(SpaceplanWattMultiplier_Module);
                 modules.push(FontChanger_Module);
-               // modules.push(TestModule_Module);
+                //modules.push(TestModule_Module);
 
 }
 
 //setTimeout(initModules(), 2000);
 function run() {
-        setTimeout(buildHMSClient(), 2201);
-        setTimeout(buildHMSClientScreen(), 2201);
+        setTimeout(buildHMSClient(), 1201);
+        setTimeout(buildHMSClientScreen(), 1201);
         setTimeout(buildHMSClientScreenSettings(), 2300);
 }
