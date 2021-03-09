@@ -77,5 +77,5 @@ function initModules() {
 function run() {
         setTimeout(buildHMSClient(), 1201);
         setTimeout(buildHMSClientScreen(), 1201);
-        setTimeout(buildHMSClientScreenSettings(), 2300);
+        //setTimeout(buildHMSClientScreenSettings(), 2300);
 }
