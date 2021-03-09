@@ -73,7 +73,7 @@ function initModules() {
 
 }
 
-setTimeout(initModules(), 1000);
-setTimeout(buildHMSClient(), 1001);
-setTimeout(buildHMSClientScreen(), 1001);
-setTimeout(buildHMSClientScreenSettings(), 1100);
+setTimeout(initModules(), 1200);
+setTimeout(buildHMSClient(), 1201);
+setTimeout(buildHMSClientScreen(), 1201);
+setTimeout(buildHMSClientScreenSettings(), 1300);
