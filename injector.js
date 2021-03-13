@@ -1,5 +1,8 @@
 //javascript:(function () {var script = document.createElement('script');script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())
 
+var injectMode;
+
+
 const client_files = [
         //Runtime Files:
         //'https://hac-inc.github.io/HMSClient.github.io/injector.js',
@@ -21,7 +24,12 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DarkMode.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/JsExecuter.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/SpaceplanWattMultiplier.js',
-        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/ChangeFont.js'
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/ChangeFont.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TestModule.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayList.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevListenerLogger.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevFunctionLogger.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/XrayGoggles.js'
 
 ]
 
@@ -48,7 +56,11 @@ const client_dev_files = [
         'ClientBase/Modules/JsExecuter.js',
         'ClientBase/Modules/SpaceplanWattMultiplier.js',
         'ClientBase/Modules/ChangeFont.js',
-        'ClientBase/Modules/TestModule.js'
+        'ClientBase/Modules/TestModule.js',
+        'ClientBase/Modules/HudArrayList.js',
+        'ClientBase/Modules/DevListenerLogger.js',
+        'ClientBase/Modules/DevFunctionLogger.js',
+        'ClientBase/Modules/XrayGoggles.js'
 
 ]
 
@@ -75,12 +87,17 @@ const client_debug_files = [
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/JsExecuter.js',
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/SpaceplanWattMultiplier.js',
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/ChangeFont.js',
-        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/TestModule.js'
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/TestModule.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/HudArrayList.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/DevListenerLogger.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/DevFunctionLogger.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/XrayGoggles.js'
 
 ]
 
 
 function inject() {
+        injectMode = "live";
         if(document.getElementById("HMSClientScriptBundle")) {
                 document.getElementById("HMSClientScriptBundle").remove();
                 
@@ -136,6 +153,7 @@ function inject() {
         }
 }
 function injectDev() {
+        injectMode = "dev";
         if(document.getElementById("HMSClientScriptBundle")) {
                 document.getElementById("HMSClientScriptBundle").remove();
 
@@ -193,6 +211,7 @@ function injectDev() {
 
 
 function injectDebug() {
+        injectMode = "liveDebug";
         if(document.getElementById("HMSClientScriptBundle")) {
                 document.getElementById("HMSClientScriptBundle").remove();
                 
