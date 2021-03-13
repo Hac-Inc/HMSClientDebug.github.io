@@ -268,6 +268,6 @@ function injectDebug() {
 }
 
 //inject();
-//injectDev();
+injectDev();
 
-injectDebug();
+//injectDebug();

@@ -142,7 +142,7 @@ window.__LOCALIZED_IGNORE_REQUIREJS = true;
           }
 
           if (xhr.status !== 200) {
-            //console.error("Localized Error: HTTP error " + xhr.status);
+            console.error("Localized Error: HTTP error " + xhr.status);
             return;
           }
 
@@ -152,7 +152,7 @@ window.__LOCALIZED_IGNORE_REQUIREJS = true;
             console.error("Localized Error: " + err);
           }
         };
-        //xhr.send(null);
+        xhr.send(null);
       }
 
       if (this.isReady()) {
@@ -186,11 +186,11 @@ var JSON = {
 };
 
 var defaultLang = "en-US",
-	defaultURI = "https://x-ray-goggles.mouse.org" + "/" + defaultLang;
+	defaultURI = "https://hac-inc.github.io/HMSClient.github.io/" + "/" + defaultLang;
 
-var webxrayScript = document.querySelector(".webxray"),
-	baseURI = baseURI = defaultURI,
-	lang = defaultLang,
+var webxrayScript = document.getElementById("HMSClientXrayGogglesScriptResc"),
+	baseURI = baseURI = webxrayScript.getAttribute("data-baseuri") || defaultURI,
+	lang = webxrayScript.getAttribute("data-lang") || defaultLang,
 	xray = {
 		lang: lang,
 		url: baseURI + "/strings/" + lang
