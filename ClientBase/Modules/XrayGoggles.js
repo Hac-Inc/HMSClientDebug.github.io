@@ -11,17 +11,17 @@ class XrayGoggles extends module {
                         case "live":
                                 let l = document.createElement('script');
                                 l.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleResc/XrayGogglesResc.js";
-                                document.head.appendChild(s);
+                                document.head.appendChild(l);
                                 break;
                         case "dev":
                                 let d = document.createElement('script');
                                 d.src = "ClientBase/ModuleResc/XrayGogglesResc.js";
-                                document.head.appendChild(s);
+                                document.head.appendChild(d);
                                 break;
                         case "liveDebug":
                                 let ld = document.createElement('script');
                                 ld.src = "https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/ModuleResc/XrayGogglesResc.js";
-                                document.head.appendChild(s);
+                                document.head.appendChild(ld);
                                 break;
                 }
         }
