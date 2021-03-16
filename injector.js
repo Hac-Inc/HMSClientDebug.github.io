@@ -357,9 +357,11 @@ function injectPremium() {
 }
 
 
-
-//inject();
-//injectPremium();
+if(document.getElementById("HMSClientInjectorScript")?.classList.contains("HMSClientPremiumLoaderScript")) {
+        //injectPremium();
+} else {
+        //inject();
+}
 
 //injectDev();
 
