@@ -358,9 +358,9 @@ function injectPremium() {
 
 
 
-inject();
+//inject();
 //injectPremium();
 
 //injectDev();
 
-//injectDebug();
+injectDebug();
